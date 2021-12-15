@@ -2,7 +2,16 @@ import Header from "../../component/Header"
 import pic from "../../assets/image/ZJ02.png"
 import sightsList from "../../data/sights"
 import "./index.scss"
+import {useEffect} from "react"
+import { ToastLoding } from "../../component/Loading";
+let ToastLodingPro = new ToastLoding();
 function Home(props) {
+    useEffect(() => {
+        ToastLodingPro.loading();
+        setTimeout(() => {
+            ToastLodingPro.hide();
+        }, 1000)
+    }, [])
     return <>
         <div className="main-container">
             <Header {...props}></Header>

@@ -1,8 +1,10 @@
 import React from "react"
 import "./index.scss"
 import { useState } from "react"
+import { fetchRegister } from "../../services/fake-services"
+import Toasts from "../../component/Loading";
 
-function Register() {
+function Register(props) {
     let [userName, setUserName] = useState("");
     let [password, setPassword] = useState("");
     let [repectPassword, setrepectPassword] = useState("");
@@ -12,6 +14,21 @@ function Register() {
     let [isFirstpws, setisFirstpws] = useState(0);
     let [isFirstRepectpws, setisFirstRepectpws] = useState(0);
 
+
+    const handleRegister = async () => {
+        setisFirstName(1)
+        setisFirstpws(1)
+        setisFirstRepectpws(1)
+        if (userName === "" || password === "" || repectPassword) return;
+        try {
+            await fetchRegister({
+                username: userName
+            })
+            props.history.push("/home")
+        } catch (error) {
+            Toasts(error.error, 1000);
+        }
+    }
 
     return <div className="register-container">
         <div className="register-content">
@@ -63,8 +80,10 @@ function Register() {
                     }
                 </div>
             </div>
-            <div className="register-button">
-                register
+            <div className="register-button" onClick={() => {
+                handleRegister()
+            }}>
+                register and login
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import './index.scss'
-import loadImage from '@/assets/images/loading.png'
+import loadImage from '../../assets/image/loading.png'
 function Toast(props) {
     return (
         <>

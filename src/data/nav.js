@@ -1,10 +1,3 @@
-/*
- * @Author: zhangzheng
- * @Date: 2021-12-15 11:00:36
- * @LastEditors: zhangzheng
- * @LastEditTime: 2021-12-15 17:47:14
- * @Descripttion:
- */
 let navList = [
   {
     id: 1,

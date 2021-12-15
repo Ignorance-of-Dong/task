@@ -1,10 +1,3 @@
-/*
- * @Author: zhangzheng
- * @Date: 2021-12-15 11:03:20
- * @LastEditors: zhangzheng
- * @LastEditTime: 2021-12-15 15:33:57
- * @Descripttion:
- */
 import FC01 from "../assets/image/FC01.png";
 import FC02 from "../assets/image/FC02.jpg";
 import FC03 from "../assets/image/FC03.jpg";
@@ -38,7 +31,7 @@ import ZJ05 from "../assets/image/ZJ05.jpg";
 let sightsList = [
   {
     id: "beijin",
-    city: "bei jin",
+    city: "Beijing",
     sights: [
       {
         id: 1,
@@ -49,8 +42,8 @@ let sightsList = [
     ]
   },
   {
-    id: "nixia",
-    city: "nixia",
+    id: "ningxia",
+    city: "Ningxia",
     sights: [
       {
         id: 2,
@@ -62,7 +55,7 @@ let sightsList = [
   },
   {
     id: "shanghai",
-    city: "shanghai",
+    city: "Shanghai",
     sights: [
       {
         id: 3,
@@ -74,7 +67,7 @@ let sightsList = [
   },
   {
     id: "zhejiang",
-    city: "zhejiang",
+    city: "Zhejiang",
     sights: [
       {
         id: 4,
@@ -86,7 +79,7 @@ let sightsList = [
   },
   {
     id: "zhangjiajie",
-    city: "zhangjiajie",
+    city: "Zhangjiajie",
     sights: [
       {
         id: 5,

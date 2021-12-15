@@ -13,8 +13,6 @@ function RouterView(props) {
                         routers.map((item, index) => {
                             const Comp = item.component
                             return <Route path={item.path} exact={item.exact} component={(routers) => {
-                                console.log(item.meta)
-                                sessionStorage.setItem("meta", JSON.stringify(item.meta))
                                 return <Comp route={item.children} {...routers}></Comp>
                             }} key={index}/>
                         }).concat(defaultRouter)

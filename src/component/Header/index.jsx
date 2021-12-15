@@ -1,5 +1,5 @@
 import "./index.scss";
-import {useState} from "react"
+import { useState } from "react"
 import Catalogue from "../Svg/Catalogue"
 import navList from "../../data/nav"
 function Header(props) {
@@ -32,7 +32,7 @@ function Header(props) {
             <div className="nav-dropdown" onClick={() => {
                 handleDropdown()
             }}>
-                <div className="icon-size"><Catalogue/></div>
+                <div className="icon-size"><Catalogue /></div>
                 <div className={dropStatus ? "nav-dropdowm-list translate" : "nav-dropdowm-list"}>
                     {
                         navList.map(item => {
@@ -49,7 +49,7 @@ function Header(props) {
                 <span>张山</span>
             </div>
         </header>
-    
+
     </>
 }
 export default Header

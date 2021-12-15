@@ -1,4 +1,5 @@
 import Header from "../../component/Header"
+import Toasts from "../../component/Loading";
 
 import "./index.scss"
 function Survey(props) {
@@ -25,7 +26,9 @@ function Survey(props) {
                                 <input type="text" placeholder="电子邮箱"/>
                             </div>
                         </div>
-                        <div className="submit-button">
+                        <div className="submit-button" onClick={() => {
+                             Toasts("您的建议已提交！", 2000);
+                        }}>
                             Submit
                         </div>
                         

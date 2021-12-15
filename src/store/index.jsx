@@ -1,10 +1,3 @@
-/*
- * @Author: zhangzheng
- * @Date: 2021-12-15 18:08:34
- * @LastEditors: zhangzheng
- * @LastEditTime: 2021-12-15 18:09:01
- * @Descripttion:
- */
 import React, { createContext, useReducer, useContext } from 'react';
 
 const initialState = {count: 0};

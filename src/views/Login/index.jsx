@@ -1,7 +1,8 @@
 import React from "react"
 import "./index.scss"
 import { useState } from "react"
-// import { useStore } from "../../store";
+import { fetchLogin } from "../../services/fake-services"
+import Toasts from "../../component/Loading";
 function Login(props) {
     let [userName, setUserName] = useState("");
     let [password, setPassword] = useState("");
@@ -9,11 +10,16 @@ function Login(props) {
     let [isFirstName, setisFirstName] = useState(0);
     let [isFirstpws, setisFirstpws] = useState(0);
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         setisFirstName(1)
         setisFirstpws(1)
         if (userName === "" || password === "") return;
-        props.history.push("/perfectInfo")
+        try {
+            await fetchLogin(userName);
+            props.history.push(`/perfectInfo?userName=${userName}`)
+        } catch (error) {
+            Toasts(error.error, 1000);
+        }
     }
     return <div className="login-container">
         <div className="login-content">
@@ -27,9 +33,9 @@ function Login(props) {
                         setisFirstName(isFirstName + 1)
                     }} />
                     {
-                        !isFirstName  || userName ? null : <div className="form-error-text">
+                        !isFirstName || userName ? null : <div className="form-error-text">
                             请输入密码
-                        </div> 
+                        </div>
                     }
                 </div>
                 <div className={!isFirstpws || password ? "login-input" : "login-input is-error"}>

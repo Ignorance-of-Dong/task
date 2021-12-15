@@ -9,15 +9,12 @@ function SightsDetail(props) {
     useEffect(() => {
         const { id, sightId} = query()
         
-        console.log(id, sightId)
         let citySights = sightsList.filter(item => {
             return item.id === id;
         })
-        console.log(citySights)
         let result = citySights[0].sights.filter(item => {
             return item.id === Number(sightId);
         })
-        console.log(result)
         setDetail(result[0])
     }, [])
     return <>

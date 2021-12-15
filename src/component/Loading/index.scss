@@ -7,11 +7,11 @@
     bottom: 20%;
     border-radius: px2rem(10);
     transform: translateX(-50%);
-    background: #000;
-    padding: px2rem(20) px2rem(30);
+    background: rgb(235, 223, 223);
+    padding: px2rem(20) px2rem(130);
     white-space: nowrap;
     box-shadow: 1px 1px 1px #ccc;
-    color: #a08383;
+    color: #ec6161;
     z-index: 999999999999999;
 }
 
@@ -30,6 +30,7 @@
         top: 0;
         left: 0;
         z-index: 1000;
+        background-color: rgba(0,0,0,.3);
     }
 
     .loading-contant {

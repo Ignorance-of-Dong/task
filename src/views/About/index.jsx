@@ -4,7 +4,7 @@ import "./index.scss"
 function About(props) {
     return <>
         <div className="main-container">
-            <Header {...props}/>
+            <Header {...props} />
             <div className="content">
                 <div className="about-wrap">
                     <p>About Me</p>
