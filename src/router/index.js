@@ -1,3 +1,10 @@
+/*
+ * @Author: zhangzheng
+ * @Date: 2021-12-15 10:04:58
+ * @LastEditors: zhangzheng
+ * @LastEditTime: 2021-12-15 17:21:53
+ * @Descripttion:
+ */
 import React from "react";
 let routerConfig = {
   config: [
@@ -33,8 +40,31 @@ let routerConfig = {
         isGloblePlayer: false
       }
     },
-    
-   
+    {
+      path: "/citySights",
+      component: React.lazy(() => import("../views/CitySights")),
+      exact: true,
+      meta: {
+        isGloblePlayer: false
+      }
+    },
+    {
+      path: "/sightsDetail",
+      component: React.lazy(() => import("../views/SightsDetail")),
+      exact: true,
+      meta: {
+        isGloblePlayer: false
+      }
+    },
+    {
+      path: "/survey",
+      component: React.lazy(() => import("../views/Survey")),
+      exact: true,
+      meta: {
+        isGloblePlayer: false
+      }
+    },
+
     {
       path: "/about",
       component: React.lazy(() => import("../views/About")),
@@ -42,7 +72,7 @@ let routerConfig = {
       meta: {
         isGloblePlayer: true
       }
-    } 
+    }
   ]
 };
 export default routerConfig;
