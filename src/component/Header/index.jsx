@@ -2,8 +2,11 @@ import "./index.scss";
 import { useState } from "react"
 import Catalogue from "../Svg/Catalogue"
 import navList from "../../data/nav"
+import { useStore } from '../../store';
 function Header(props) {
     let [dropStatus, setDropStatus] = useState(false)
+    const [state] = useStore();
+    console.log(state)
     const handleDropdown = () => {
         setDropStatus(!dropStatus)
     }
@@ -15,7 +18,7 @@ function Header(props) {
             <span className="header-title" onClick={() => {
                 props.history.push("/home")
             }}>
-                DFV
+                Traveling China
             </span>
             <div className="spacer"></div>
             <div className="nav-list">
@@ -46,7 +49,7 @@ function Header(props) {
                 </div>
             </div>
             <div className="header-user">
-                <span>nickName</span>
+                <span>{state.nickName || "--"}</span>
             </div>
         </header>
 

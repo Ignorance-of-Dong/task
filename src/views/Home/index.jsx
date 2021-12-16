@@ -2,7 +2,7 @@ import Header from "../../component/Header"
 import pic from "../../assets/image/ZJ02.png"
 import sightsList from "../../data/sights"
 import "./index.scss"
-import {useEffect} from "react"
+import { useEffect } from "react"
 import { ToastLoding } from "../../component/Loading";
 let ToastLodingPro = new ToastLoding();
 function Home(props) {
@@ -15,11 +15,11 @@ function Home(props) {
     return <>
         <div className="main-container">
             <Header {...props}></Header>
-            <div className="container">
+            <main n className="container">
                 <div className="show-pic">
                     <img src={pic} alt="" />
                 </div>
-                <p className="home-title">旅游城市</p>
+                <p className="home-title">Traveling Cities</p>
                 <div className="city-container">
                     {
                         sightsList.map(item => {
@@ -32,7 +32,7 @@ function Home(props) {
                         })
                     }
                 </div>
-            </div>
+            </main>
         </div>
     </>
 }

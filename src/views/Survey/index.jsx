@@ -6,35 +6,35 @@ function Survey(props) {
     return <>
         <div className="main-container">
             <Header {...props} />
-            <div className="content">
+            <main className="content">
                 <div className="survey-container">
-                    <p className="survey-title">参与调查</p>
+                    <p className="survey-title">Take a Survey</p>
                     <div className="survey-form">
                         <div className="survey-form-item">
-                            <div className="label">你最喜欢哪些景点？</div>
+                            <div className="label">Which sights you like most?</div>
                             <div className="survey-input">
                                 <input type="text" />
                             </div>
                             
                         </div>
                         <div className="survey-form-item">
-                            <div className="label">留下您的信息以备将来更新！</div>
+                            <div className="label">Leave your information for future updates!</div>
                             <div className="survey-input">
-                                <input type="text" placeholder="名称"/>
+                                <input type="text" placeholder="Name"/>
                             </div>
                             <div className="survey-input">
-                                <input type="text" placeholder="电子邮箱"/>
+                                <input type="text" placeholder="Email"/>
                             </div>
                         </div>
                         <div className="submit-button" onClick={() => {
-                             Toasts("您的建议已提交！", 2000);
+                             Toasts("Your suggestion has been submitted!", 2000);
                         }}>
                             Submit
                         </div>
                         
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </>
 }

@@ -17,21 +17,21 @@ function CitySights(props) {
     return <>
         <div className="main-container">
             <Header {...props}></Header>
-            <div className="content">
+            <main className="content">
                 <div className="show-pic"
-                 
+
                 >
                     <img src={detail && detail.sights[0].images[0]} alt="" />
                     <p className="city-name"><span>{detail && detail.city}</span></p>
                 </div>
-                <p className="home-title">必游景点</p>
+                <p className="home-title">Recommendation</p>
                 {
                     detail && detail.sights.map(item => {
                         return <div className="city-sights-container" key={item.id} onClick={() => {
                             props.history.push(`/sightsDetail?id=${id}&sightId=${item.id}`)
                         }}>
                             <div className="city-pic"
-                            
+
                             >
                                 <img src={item.images[0]} alt="" />
                             </div>
@@ -46,8 +46,7 @@ function CitySights(props) {
                         </div>
                     })
                 }
-
-            </div>
+            </main>
         </div>
     </>
 }

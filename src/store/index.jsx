@@ -1,13 +1,14 @@
 import React, { createContext, useReducer, useContext } from 'react';
 
-const initialState = {count: 0};
+const initialState = {
+  nickName: ""
+};
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'increment':
-      return {count: state.count + 1};
-    case 'decrement':
-      return {count: state.count - 1};
+    case 'updateNickName':
+      console.log(action)
+      return {nickName: action.nickName};
     default:
       throw new Error();
   }

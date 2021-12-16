@@ -5,7 +5,7 @@ function About(props) {
     return <>
         <div className="main-container">
             <Header {...props} />
-            <div className="content">
+            <main className="content">
                 <div className="about-wrap">
                     <p>About Me</p>
                     <div className="about-content">
@@ -19,7 +19,7 @@ function About(props) {
 
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </>
 }

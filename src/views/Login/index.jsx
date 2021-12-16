@@ -28,24 +28,24 @@ function Login(props) {
             </div>
             <div className="login-form">
                 <div className={!isFirstName || userName ? "login-input" : "login-input is-error"}>
-                    <input type="text" placeholder="请输入账号" value={userName} onChange={(e) => {
+                    <input type="text" placeholder="Please enter the Username" value={userName} onChange={(e) => {
                         setUserName(e.target.value)
                         setisFirstName(isFirstName + 1)
                     }} />
                     {
                         !isFirstName || userName ? null : <div className="form-error-text">
-                            请输入密码
+                            Please enter the Username
                         </div>
                     }
                 </div>
                 <div className={!isFirstpws || password ? "login-input" : "login-input is-error"}>
-                    <input type="text" type="password" placeholder="请输入密码" value={password} onChange={(e) => {
+                    <input type="password" placeholder="Please enter the Password" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                         setisFirstpws(isFirstpws + 1)
                     }} />
                     {
                         !isFirstpws || password ? null : <div className="form-error-text">
-                            请输入密码
+                            Please enter the Password
                         </div>
                     }
                 </div>

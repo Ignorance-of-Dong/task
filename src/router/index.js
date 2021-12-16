@@ -1,10 +1,3 @@
-/*
- * @Author: zhangzheng
- * @Date: 2021-12-15 10:04:58
- * @LastEditors: zhangzheng
- * @LastEditTime: 2021-12-15 17:21:53
- * @Descripttion:
- */
 import React from "react";
 let routerConfig = {
   config: [

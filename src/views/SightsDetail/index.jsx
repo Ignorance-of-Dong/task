@@ -20,7 +20,7 @@ function SightsDetail(props) {
     return <>
         <div className="main-container">
             <Header {...props}/>
-            <div className="content">
+            <main className="content">
                 <div className="sights-detail-container">
                     <h3>{detail && detail.name}</h3>
                     <div className="sights-desc">
@@ -38,7 +38,7 @@ function SightsDetail(props) {
                        
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </>
 }
