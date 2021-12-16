@@ -46,7 +46,7 @@ function Header(props) {
                 </div>
             </div>
             <div className="header-user">
-                <span>张山</span>
+                <span>nickName</span>
             </div>
         </header>
 

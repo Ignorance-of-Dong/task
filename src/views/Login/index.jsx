@@ -39,7 +39,7 @@ function Login(props) {
                     }
                 </div>
                 <div className={!isFirstpws || password ? "login-input" : "login-input is-error"}>
-                    <input type="text" placeholder="请输入密码" value={password} onChange={(e) => {
+                    <input type="text" type="password" placeholder="请输入密码" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                         setisFirstpws(isFirstpws + 1)
                     }} />

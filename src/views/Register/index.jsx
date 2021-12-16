@@ -19,12 +19,12 @@ function Register(props) {
         setisFirstName(1)
         setisFirstpws(1)
         setisFirstRepectpws(1)
-        if (userName === "" || password === "" || repectPassword) return;
+        if (userName === "" || password === "" || repectPassword === "") return;
         try {
             await fetchRegister({
                 username: userName
             })
-            props.history.push("/home")
+            props.history.push(`/perfectInfo?userName=${userName}`)
         } catch (error) {
             Toasts(error.error, 1000);
         }
@@ -55,7 +55,7 @@ function Register(props) {
                     className={!isFirstpws || password ? "register-input" : "register-input is-error"}
                 >
                     <div className="form-label">密码：</div>
-                    <input type="text" placeholder="请输入密码" value={password} onChange={(e) => {
+                    <input type="text" type="password" placeholder="请输入密码" value={password} onChange={(e) => {
                         setPassword(e.target.value)
                         setisFirstpws(isFirstpws + 1)
                     }} />
@@ -69,7 +69,7 @@ function Register(props) {
                     className={!isFirstRepectpws || repectPassword ? "register-input" : "register-input is-error"}
                 >
                     <div className="form-label">确认密码：</div>
-                    <input type="text" placeholder="请输入密码" value={repectPassword} onChange={(e) => {
+                    <input type="text" type="password" placeholder="请输入密码" value={repectPassword} onChange={(e) => {
                         setrepectPassword(e.target.value)
                         setisFirstRepectpws(isFirstRepectpws + 1)
                     }} />
