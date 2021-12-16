@@ -34,3 +34,7 @@ html,body, #root{
   color: red;
   font-size: 10px;
 }
+.footer-container {
+  padding: 10px 0;
+  text-align: center;
+}

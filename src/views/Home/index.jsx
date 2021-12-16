@@ -33,6 +33,9 @@ function Home(props) {
                     }
                 </div>
             </main>
+            <footer className="footer-container">
+                Copyright 2021 Chang Li all rights reserved
+            </footer>
         </div>
     </>
 }
